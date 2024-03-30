@@ -2,7 +2,7 @@
 <html lang="en-US">
   <head>
     <meta charset="utf-8"/>
-    <title>Variables: Task 1</title>
+    <title>Loops: Task 1</title>
     <style>
       p {
         color: purple;
@@ -26,20 +26,21 @@
 
   </body>
   <script>
+    const myArray = ['tomatoes', 'chick peas', 'onions', 'rice', 'black beans'];
+    const list = document.createElement('ul');
+
     // Add your code here
-    myName='Emiliano';
-    myAge=21;
+    for (let item of myArray) {
+      const listItem = document.createElement('li');
+      listItem.textContent = item;
+      list.appendChild(listItem);
+    }
+  
 
     // Don't edit the code below here!
 
     const section = document.querySelector('section');
-
-    const para1 = document.createElement('p');
-    para1.textContent = myName;
-    const para2 = document.createElement('p');
-    para2.textContent = myAge;
-    section.appendChild(para1);
-    section.appendChild(para2);
+    section.appendChild(list);
   </script>
 
 </html>
